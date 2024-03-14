@@ -1,0 +1,52 @@
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212; /* خلفية داكنة */
+    color: #e0e0e0; /* نص فاتح */
+}
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: #1e1e1e; /* خلفية الحاوية الداكنة */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(255,255,255,0.1); /* ظل فاتح */
+    border-radius: 10px;
+    text-align: right;
+}
+h1 {
+    color: #ffffff; /* نص العنوان الفاتح */
+    margin-bottom: 20px;
+}
+form {
+    margin-top: 20px;
+}
+label {
+    margin-bottom: 5px;
+    color: #bbbbbb; /* نص التسمية الفاتح */
+}
+input, button {
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #333333; /* حدود الإدخال الداكنة */
+    background: #262626; /* خلفية الإدخال الداكنة */
+    color: #e0e0e0; /* نص الإدخال الفاتح */
+    border-radius: 5px;
+}
+button {
+    background-color: #333333; /* خلفية الزر الداكنة */
+    color: #ffffff; /* نص الزر الفاتح */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #444444; /* خلفية الزر عند التحويم */
+}

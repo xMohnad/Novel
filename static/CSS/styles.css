@@ -1,0 +1,127 @@
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --night-background-color: #000;
+  --night-text-color: #fff;
+  --button-background: #f0f0f0;
+  --button-text-color: #333;
+  --button-border-color: #ccc;
+  --button-hover-background: #ddd;
+  --button-hover-border-color: #bbb;
+  --input-background: #f8f8f8;
+  --input-text-color: #333;
+  --input-border-color: #ccc;
+
+  /* ألوان الأزرار في الوضع الليلي */
+  --night-button-background: #333;
+  --night-button-text-color: #fff;
+  --night-button-border-color: #666;
+
+  /* لون الخط في الوضع الليلي */
+  --night-font-color: #fff;
+
+  /* لون نص الأزرار في الوضع الليلي */
+  --night-button-text-color: #fff;
+}
+
+body.night-mode {
+  background-color: var(--night-background-color);
+  color: var(--night-text-color);
+}
+
+#textContainer,
+#fontSelect {
+  width: 100%;
+}
+
+#extractedText {
+  white-space: pre-wrap;
+  font-size: 18px;
+  overflow-wrap: break-word;
+}
+
+.control-button,
+#fontSelect {
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  border-radius: 4px;
+
+  /* تعريف الألوان للأزرار في الوضع العادي */
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: 2px solid var(--button-border-color);
+}
+
+.control-button:hover,
+.control-button:focus,
+#fontSelect:hover,
+#fontSelect:focus {
+  transform: scale(1.06);
+}
+
+.control-button:hover {
+  background-color: var(--button-hover-background);
+  border-color: var(--button-hover-border-color);
+}
+
+#fontSelect:active,
+#fontSelect:focus-within {
+  background-color: var(--input-background);
+  border: 1px solid var(--input-border-color);
+}
+
+/* تحديد الألوان للأزرار في الوضع الليلي */
+body.night-mode .control-button,
+body.night-mode #fontSelect {
+  background-color: var(--night-button-background);
+  color: var(--night-button-text-color);
+  border-color: var(--night-button-border-color);
+}
+
+input[type="text"],
+input[type="number"] {
+  background-color: var(--input-background);
+  color: var(--input-text-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* تغيير لون الخط في الوضع الليلي */
+body.night-mode {
+  color: var(--night-font-color);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .control-button,
+  #fontSelect {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    font-size: 18px;
+  }
+  .control-button,
+  #fontSelect {
+    padding: 10px 20px;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 15px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  direction: rtl;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xMohnad</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <script src="{{ url_for('static', filename='/JS/scripts.js') }}"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/CSS/styles.css') }}">
+
+    <!-- إضافة الخطوط العربية -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@300;400;500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marhey&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- إضافة الأزرار للتحكم في الخط والوضع الليلي وملء الشاشة -->
+    <select id="fontSelect" onchange="changeFontFamily(this.value)">
+        <option value="Amiri">Amiri</option>
+        <option value="Lateef">Lateef</option>
+        <option value="Scheherazade">Scheherazade</option>
+        <option value="Marhey">Marhey</option>
+    </select>
+
+    <button class="control-button" onclick="changeFontSize(2)">تكبير الخط</button>
+    <button class="control-button" onclick="toggleNightMode()">تغيير الوضع</button>
+    <button class="control-button" onclick="changeFontSize(-2)">تصغير الخط</button>
+    <button class="control-button" onclick="toggleFullScreen()">ملء الشاشة</button>
+
+    <div id="textContainer">
+        <!-- Add a title here if needed -->
+        <div id="extractedText">{{ extracted_text }}</div>
+    </div>
+</body>
+
+</html>
