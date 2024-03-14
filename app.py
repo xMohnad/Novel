@@ -86,4 +86,6 @@ def extract():
         return jsonify({'extracted_text': extracted_text})
     else:
         return render_template('result.html', extracted_text=extracted_text)
-      
+
+if __name__ == '__main__':
+    app.run()
